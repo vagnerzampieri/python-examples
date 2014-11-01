@@ -22,3 +22,5 @@ print "Alright, all done."
 
 out_file.close()
 in_file.close()
+
+# python exercise-17.py test.txt new_file.txt
