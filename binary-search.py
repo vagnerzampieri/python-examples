@@ -1,4 +1,4 @@
-# O(log n)
+# Big O: O(log n)
 def binary_search(list, item):
     # 1. Set the low and high to the first and last index of the list
     count_attempts = 0
