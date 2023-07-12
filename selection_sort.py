@@ -1,6 +1,6 @@
 from find_min_index import find_min_index
 
-# Big O: O(n)
+# Big O: O(n^2)
 def selection_sort(arr):
     # 1. Create a new array
     newArr = []
