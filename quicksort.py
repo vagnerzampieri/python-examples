@@ -5,7 +5,7 @@ def quicksort(array):
         return array
     else:
         # 2. If so, set the pivot to the first element of the array
-        pivot = array[0]
+        pivot = array[len(array) // 2]
         print(f'pivot {pivot}')
         # 3. Set the less array to the elements of the array that are lower than the pivot
         less = [i for i in array[1:] if i <= pivot]
