@@ -1,3 +1,4 @@
+# Big O: O(n log n)
 def quicksort(array):
     # 1. Check if the array is empty or has one element
     if len(array) < 2:
