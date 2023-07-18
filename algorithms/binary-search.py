@@ -18,20 +18,18 @@ def binary_search(list, item):
         # 4. If not, check if the item is higher or lower than the middle element
         if guess > item:
             # 5. If lower, set the high to the middle element - 1
+            print(f'high {mid - 1}')
             high = mid - 1
 
         else:
             # 6. If higher, set the low to the middle element + 1
+            print(f'low {mid + 1}')
             low = mid + 1
     return None
 
 
-my_list = [1, 3, 5, 7, 9]
+# print(binary_search([1, 3, 5, 7, 9], 3))
 
-print(binary_search(my_list, 3))
+# print(binary_search([1, 3, 5, 7, 9], -1))
 
-print(binary_search(my_list, -1))
-
-my_list = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-
-print(binary_search(my_list, 11))
+print(binary_search([1, 3, 5, 7, 9, 11, 13, 15, 17, 19], 13))
