@@ -13,7 +13,7 @@ def person_is_seller(name):
     return name[-1] == "m"
 
 # Big O: O(V+E)
-def search(name):
+def search():
   # 1. Create a queue, you can create with deque from collections
   queue_search = []
   # 2. Add all your neighbors to the queue
@@ -40,4 +40,4 @@ def search(name):
             verifieds.append(person)
   return False
 
-search("you")
+search()
