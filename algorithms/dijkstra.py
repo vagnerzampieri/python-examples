@@ -59,17 +59,25 @@ node = find_lower_cost(costs)
 # 2. If you have processed all the nodes, this algorithm is done
 while node is not None:
     # 3. Otherwise, update the costs for the neighbors of this node
+    # print(f'node: {node}')
     cost = costs[node]
+    # print(f'cost: {cost}')
     # 4. If any of the neighbors' costs were updated, update their parents too
     neighbors = graph[node]
+    # print(f'neighbors: {neighbors}')
     # 5. Repeat until you have processed every node in the graph
     for n in neighbors.keys():
         # 6. If it is cheaper to get to this neighbor by going through this node
+        # print(f'cost: {cost}')
+        # print(f'neighbors[n]: {neighbors[n]}')
         new_cost = cost + neighbors[n]
+        # print(f'new_cost: {new_cost}')
         # 7. Update the cost of this node
         if costs[n] > new_cost:
             costs[n] = new_cost
+            # print(f'costs[n]: {costs[n]}')
             parents[n] = node
+            # print(f'parents[n]: {parents[n]}')
     # 8. Mark this node as processed
     processed.append(node)
     # 9. Find the next node to process, and loop
