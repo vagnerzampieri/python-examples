@@ -40,12 +40,16 @@ def find_lower_cost(costs):
     for node in costs:
         # 8. Get the cost of the node
         cost = costs[node]
+        # print(f'cost: {cost}')
+        # print(f'processed: {processed}')
         # 9. If it is lower than the current lower cost and has not been processed yet
         if cost < lower_cost and node not in processed:
             # 10. Set it as the new lower cost
             lower_cost = cost
+            # print(f'lower_cost: {lower_cost}')
             # 11. Set it as the new node with the lower cost
             node_lower_cost = node
+            # print(f'node_lower_cost: {node_lower_cost}')
     # 12. Return the node with the lower cost
     return node_lower_cost
 
@@ -83,14 +87,14 @@ def order_parents(parents):
     # 3. Loop until you reach the start
     while parent != 'start':
         # 4. Get the next parent
-        print(f'before parent: {parent}')
+        # print(f'before parent: {parent}')
         parent = parents[parent]
-        print(f'parent: {parent}')
+        # print(f'parent: {parent}')
         # 5. Add it to the sequence
         sequence.insert(0, parent)
-        print(f'sequence: {sequence}')
+        # print(f'sequence: {sequence}')
     # 6. Return the sequence
     return sequence
 
-# print(order_parents(parents))
-order_parents(parents)
+print(order_parents(parents))
+# order_parents(parents)
