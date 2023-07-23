@@ -73,3 +73,20 @@ while node is not None:
 
 print(costs)
 print(parents)
+
+# order parents by start sequence
+def order_parents(parents):
+    # 1. Set the initial parent
+    parent = 'end'
+    # 2. Set the initial sequence
+    sequence = [parent]
+    # 3. Loop until you reach the start
+    while parent != 'start':
+        # 4. Get the next parent
+        parent = parents[parent]
+        # 5. Add it to the sequence
+        sequence.insert(0, parent)
+    # 6. Return the sequence
+    return sequence
+
+print(order_parents(parents))
