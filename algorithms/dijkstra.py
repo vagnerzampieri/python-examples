@@ -83,10 +83,14 @@ def order_parents(parents):
     # 3. Loop until you reach the start
     while parent != 'start':
         # 4. Get the next parent
+        print(f'before parent: {parent}')
         parent = parents[parent]
+        print(f'parent: {parent}')
         # 5. Add it to the sequence
         sequence.insert(0, parent)
+        print(f'sequence: {sequence}')
     # 6. Return the sequence
     return sequence
 
-print(order_parents(parents))
+# print(order_parents(parents))
+order_parents(parents)
